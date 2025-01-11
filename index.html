@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harvard University</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("mobileMenu");
+        menu.classList.toggle("active");
+        document.body.style.overflow = menu.classList.contains("active")
+          ? "hidden"
+          : "auto";
+      }
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="nav-container">
+        <a href="#" class="logo-link">
+          <div class="logo-placeholder"></div>
+        </a>
+
+        <!-- Mobile Menu Content -->
+        <div class="mobile-menu" id="mobileMenu">
+          <div class="mobile-menu-content">
+            <div class="mobile-menu-header">
+              <button class="close-menu" onclick="toggleMenu()">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <path d="M18 6L6 18M6 6l12 12"></path>
+                </svg>
+              </button>
+            </div>
+            <nav class="mobile-nav">
+              <a href="#" class="mobile-link">About</a>
+              <a href="#" class="mobile-link">Academics</a>
+              <a href="#" class="mobile-link">Research</a>
+              <a href="#" class="mobile-link">Campus Life</a>
+              <a href="#" class="mobile-link">Admissions</a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <button class="search-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="30"
+              height="30"
+              viewBox="0,0,256,256"
+            >
+              <g fill="#ffffff">
+                <g transform="scale(5.12,5.12)">
+                  <path
+                    d="M21,4c-9.91776,0 -18,8.08224 -18,18c0,9.91776 8.08224,18 18,18c3.62177,0 6.99231,-1.08607 9.82031,-2.9375l12.55859,12.55859l4.24219,-4.24219l-12.39648,-12.39648c2.35686,-3.04404 3.77539,-6.84769 3.77539,-10.98242c0,-9.91776 -8.08224,-18 -18,-18zM21,8c7.75624,0 14,6.24376 14,14c0,7.75624 -6.24376,14 -14,14c-7.75624,0 -14,-6.24376 -14,-14c0,-7.75624 6.24376,-14 14,-14z"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+            <span>Search</span>
+          </button>
+          <button class="menu-btn" onclick="toggleMenu()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="30"
+              height="30"
+              viewBox="0,0,256,256"
+            >
+              <g fill="#ffffff">
+                <g transform="scale(5.12,5.12)">
+                  <path d="M0,9v2h50v-2zM0,24v2h50v-2zM0,39v2h50v-2z"></path>
+                </g>
+              </g>
+            </svg>
+            Menu
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-------------------------------------------------------- HERO SECTION  -------------------------------------------------------->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Resolutions</h1>
+          <p>
+            Whether you want to make small improvements to your lifestyle or
+            treat yourself to some useful knowledge, the Harvard community can
+            help you start something new this year.
+          </p>
+        </div>
+      </section>
+
+      <!-------------------------------------------------------- Before you choose SECTION  -------------------------------------------------------->
+
+      <section class="resolution-guide">
+        <div class="quote-image" style="margin-top: 50px">
+          <img src="assets/img1.jpeg" alt="Robert Waldinger" />
+        </div>
+
+        <div class="guide-content">
+          <span class="section-label">BEFORE YOU CHOOSE</span>
+          <h2>A guide to keeping your resolution</h2>
+          <p>Moving forward, even slowly, puts your goals within reach.</p>
+          <a href="#" class="arrow-link"
+            >Learn more about sticking to resolutions</a
+          >
+        </div>
+      </section>
+
+      <!-------------------------------------------------------- QUOTE SECTION  -------------------------------------------------------->
+      <section class="quote-section">
+        <div class="quote-container">
+          <div class="quote-content">
+            <div class="quote-marks"></div>
+            <h1>
+              If you have a motivation to change, a conscious motivation, you're
+              more likely to take steps that are hard and require persistence.
+            </h1>
+
+            <div class="quote-author">
+              <h3>Robert Waldinger</h3>
+              <p>
+                Professor of psychiatry at Harvard Medical School and director
+                of the Harvard Study on Adult Development, one of the
+                longest-running studies on human happiness and wellbeing
+              </p>
+            </div>
+          </div>
+          <div class="quote-image">
+            <img src="assets/img2.jpg" alt="Robert Waldinger" />
+          </div>
+        </div>
+      </section>
+
+      <!-------------------------------------------------------- Take a free online course SECTION  -------------------------------------------------------->
+      <section class="courses-section">
+        <div class="courses-container">
+          <!-- Header content -->
+          <div class="courses-header">
+            <h2>Take a free online course</h2>
+            <div class="header-content">
+              <p>
+                Be part of the Harvard community from anywhere in the world with
+                our online courses.
+              </p>
+              <!-- <a href="#" class="explore-link">Explore more online courses</a> -->
+            </div>
+          </div>
+
+          <!-- Course cards container -->
+          <div class="course-cards">
+            <!-- CS50 Card -->
+            <div class="course-card">
+              <div class="card-image-wrapper">
+                <img
+                  src="assets/img3.png"
+                  alt="CS50 Course"
+                  class="card-image"
+                />
+              </div>
+              <div class="card-content">
+                <span class="course-tag">Free Course</span>
+                <h3>CS50</h3>
+                <p class="course-subtitle">Introduction to Computer Science</p>
+                <div class="course-status">
+                  <span class="status-dot"></span>
+                  <span class="status-text">Available now</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Resilience Card -->
+            <div class="course-card">
+              <div class="card-image-wrapper">
+                <img
+                  src="assets/img4.png"
+                  alt="Building Personal Resilience"
+                  class="card-image"
+                />
+              </div>
+              <div class="card-content">
+                <span class="course-tag">Free Course</span>
+                <h3>Building Personal Resilience</h3>
+                <p class="course-subtitle">
+                  Managing Anxiety and Mental Health
+                </p>
+                <div class="course-status">
+                  <span class="status-dot"></span>
+                  <span class="status-text">Available now</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Food Fermentation Card -->
+            <div class="course-card">
+              <div class="card-image-wrapper">
+                <img
+                  src="assets/img5.jpeg"
+                  alt="Food Fermentation"
+                  class="card-image"
+                />
+              </div>
+              <div class="card-content">
+                <span class="course-tag">Free Course</span>
+                <h3>Food Fermentation</h3>
+                <p class="course-subtitle">
+                  The Science of Cooking with Microbes
+                </p>
+                <div class="course-status">
+                  <span class="status-dot"></span>
+                  <span class="status-text">Available now</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="course-cards">
+            <div class="course-card">
+              <div class="card-image-wrapper">
+                <img
+                  src="assets/img6.jpg"
+                  alt="CS50 Course"
+                  class="card-image"
+                />
+              </div>
+              <div class="card-content">
+                <span class="course-tag">Free Course</span>
+                <h3>Backyard meteorology</h3>
+                <p class="course-subtitle">The science of weather</p>
+                <div class="course-status">
+                  <span class="status-dot"></span>
+                  <span class="status-text">Available now</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="course-card">
+              <div class="card-image-wrapper">
+                <img
+                  src="assets/img7.jpeg"
+                  alt="CS50 Course"
+                  class="card-image"
+                />
+              </div>
+              <div class="card-content">
+                <span class="course-tag">Free Course</span>
+                <h3>Unabridged</h3>
+                <p class="course-subtitle">
+                  Better understand academic research
+                </p>
+                <div class="course-status">
+                  <span class="status-dot"></span>
+                  <span class="status-text">Available now</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="course-card">
+              <div class="card-image-wrapper">
+                <img
+                  src="assets/img8.jpeg"
+                  alt="CS50 Course"
+                  class="card-image"
+                />
+              </div>
+              <div class="card-content">
+                <span class="course-tag">Free Course</span>
+                <h3>We the people</h3>
+                <p class="course-subtitle">
+                  Civic engagement in a constitutional democracy
+                </p>
+                <div class="course-status">
+                  <span class="status-dot"></span>
+                  <span class="status-text">Available now</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-------------------------------------------------------- Concentrate on mental health SECTION  -------------------------------------------------------->
+
+      <section class="mental-health">
+        <div class="mental-container">
+          <!-- Left Column -->
+          <div class="mental-intro">
+            <div class="intro-content">
+              <h2>Concentrate on mental health</h2>
+              <p>
+                Whether you're looking to
+                <a href="#" class="underline-link">increase your happiness</a>
+                or
+                <a href="#" class="underline-link"
+                  >start a mindfulness practice</a
+                >, Harvard experts have resources to help.
+              </p>
+              <a href="#" class="learn-more">Learn more about mental health</a>
+            </div>
+            <div class="mental-image">
+              <img src="assets/img9.jpg" alt="Person meditating by the water" />
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="mindfulness-steps">
+            <p style="font-weight: bolder; font-size: large">
+              Try a mindfulness exercise today
+            </p>
+
+            <div class="step">
+              <h4><span class="step-number">1.</span> Sit</h4>
+              <p>Sit on a straight-backed chair or comfortably on the floor.</p>
+            </div>
+
+            <div class="step">
+              <h4><span class="step-number">2.</span> Focus</h4>
+              <p>
+                Focus on your breath and pay attention to things such as the
+                sensations of air flowing into your nostrils and out of your
+                mouth, or your belly rising and falling as you inhale and
+                exhale.
+              </p>
+            </div>
+
+            <div class="step">
+              <h4><span class="step-number">3.</span> Expand</h4>
+              <p>
+                Once you've narrowed your concentration in this way, begin to
+                widen your focus. Become aware of sounds, sensations, and ideas.
+              </p>
+            </div>
+
+            <div class="step">
+              <h4><span class="step-number">4.</span> Embrace</h4>
+              <p>
+                Embrace and consider each thought or sensation without judging
+                it good or bad. If your mind starts to race, return your focus
+                to your breathing. Then expand your awareness again.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-------------------------------------------------------- Read an engaging book SECTION  -------------------------------------------------------->
+
+      <section class="book-rec-section">
+        <div class="book-rec-container">
+          <!-- Header -->
+          <div class="book-rec-header">
+            <h2>Read an engaging book</h2>
+            <a href="#" class="book-rec-explore-all">
+              <img
+                src="assets/icons/arrow.png"
+                alt="arrow"
+                class="book-rec-arrow-icon"
+              />
+              Explore all of Harvard Reads
+            </a>
+          </div>
+
+          <!-- First row of cards -->
+          <div class="book-rec-grid">
+            <!-- HBS Book Card -->
+            <a href="#" class="book-rec-card">
+              <div class="book-rec-overlay"></div>
+              <img
+                src="assets/img10.jpg"
+                alt="The Power Broker Book"
+                class="book-rec-image"
+              />
+              <div class="book-rec-content">
+                <h3 class="book-rec-title">
+                  Harvard Business School recommendations
+                </h3>
+                <div class="book-rec-link">
+                  <span>Explore the HBS picks</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- College Book Card -->
+            <a href="#" class="book-rec-card">
+              <div class="book-rec-overlay"></div>
+              <img
+                src="assets/img11.png"
+                alt="Never Let Me Go Book"
+                class="book-rec-image"
+              />
+              <div class="book-rec-content">
+                <h3 class="book-rec-title">
+                  Harvard College student recommendations
+                </h3>
+                <div class="book-rec-link">
+                  <span>Explore the College picks</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Design School Card -->
+            <a href="#" class="book-rec-card">
+              <div class="book-rec-overlay"></div>
+              <img
+                src="assets/img12.jpg"
+                alt="Design by Fire Book"
+                class="book-rec-image"
+              />
+              <div class="book-rec-content">
+                <h3 class="book-rec-title">
+                  Harvard School of Design recommendations
+                </h3>
+                <div class="book-rec-link">
+                  <span>Explore the GSD picks</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Second row of cards -->
+          <div class="book-rec-grid">
+            <!-- Education School Card -->
+            <a href="#" class="book-rec-card">
+              <div class="book-rec-overlay"></div>
+              <img
+                src="assets/img13.jpg"
+                alt="Free to Be Book"
+                class="book-rec-image"
+              />
+              <div class="book-rec-content">
+                <h3 class="book-rec-title">
+                  Harvard School of Education recommendations
+                </h3>
+                <div class="book-rec-link">
+                  <span>Explore the GSE picks</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Divinity School Card -->
+            <a href="#" class="book-rec-card">
+              <div class="book-rec-overlay"></div>
+              <img
+                src="assets/img14.jpg"
+                alt="Darwin's Pharmacy Book"
+                class="book-rec-image"
+              />
+              <div class="book-rec-content">
+                <h3 class="book-rec-title">
+                  Harvard Divinity School recommendations
+                </h3>
+                <div class="book-rec-link">
+                  <span>Explore the HDS picks</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Salata Institute Card -->
+            <a href="#" class="book-rec-card">
+              <div class="book-rec-overlay"></div>
+              <img
+                src="assets/img15.jpg"
+                alt="The End of Nature Book"
+                class="book-rec-image"
+              />
+              <div class="book-rec-content">
+                <h3 class="book-rec-title">
+                  The Salata Institute recommendations
+                </h3>
+                <div class="book-rec-link">
+                  <span>Explore these climate related picks</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!--------------------------------------------------------    Focus on physical health SECTION  -------------------------------------------------------->
+      <section class="mental-health">
+        <div class="mental-container">
+          <!-- Left Column -->
+          <div class="mental-intro">
+            <div class="intro-content">
+              <h2>Focus on physical health</h2>
+              <p>
+                Whether you're looking to
+                <a href="#" class="underline-link">better understand food</a>,
+                learn how to
+                <a href="#" class="underline-link">get more sleep</a>, or
+                explore the
+                <a href="#" class="underline-link">latest studies on exercise</a
+                >, the Harvard community has the research and resources to help.
+              </p>
+            </div>
+            <div class="mental-image">
+              <img src="assets/img16.jpeg" alt="People walking on a trail" />
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="mindfulness-steps">
+            <p style="font-weight: bolder; font-size: larger">
+              Starting can be as simple as finding the right form of exercise
+            </p>
+
+            <div class="step">
+              <h4>Walking</h4>
+              <p>Good exercise for people just starting their routine</p>
+              <a href="#" class="learn-more">
+                Learn more about this accessible way to stay active
+              </a>
+            </div>
+
+            <div class="step">
+              <h4>Yoga</h4>
+              <p>
+                Perfect exercise for people looking for mind and body benefits
+              </p>
+              <a href="#" class="learn-more">
+                Learn more about this 5,000-year-old way to stay active
+              </a>
+            </div>
+
+            <div class="step">
+              <h4>Dance</h4>
+              <p>Fun exercise for people wanting to practice their moves</p>
+              <a href="#" class="learn-more">
+                Learn more about staying active to a beat
+              </a>
+            </div>
+
+            <div class="step">
+              <h4>High-intensity interval training</h4>
+              <p>Great exercise for people without a lot of time</p>
+              <a href="#" class="learn-more">
+                Learn more about this quick and powerful way to stay active
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--------------------------------------------------------       Subscribe to an informative podcast SECTION  -------------------------------------------------------->
+      <section class="pod-section">
+        <div class="pod-container">
+          <div class="pod-header">
+            <h2>Subscribe to an informative podcast</h2>
+            <p class="pod-subtitle">
+              Better understand our world through conversations with
+              researchers, leaders, experts, and innovators.
+            </p>
+          </div>
+
+          <div class="pod-list">
+            <!-- Harvard Thinking Podcast -->
+            <div class="pod-item">
+              <div class="pod-content">
+                <h3 class="pod-title">Harvard Thinking</h3>
+                <p class="pod-source">Harvard Gazette</p>
+                <p class="pod-description">
+                  Experts from different disciplines converse about issues that
+                  affect people in real, tangible ways.
+                </p>
+              </div>
+              <div class="pod-image">
+                <img src="assets/img17.jpeg" alt="Harvard Thinking Podcast" />
+              </div>
+            </div>
+
+            <!-- HBR IdeaCast -->
+            <div class="pod-item">
+              <div class="pod-content">
+                <h3 class="pod-title">HBR IdeaCast</h3>
+                <p class="pod-source">Harvard Business Review</p>
+                <p class="pod-description">
+                  Learn the latest from leading thinkers in business and
+                  management.
+                </p>
+              </div>
+              <div class="pod-image">
+                <img src="assets/img18.png" alt="HBR IdeaCast" />
+              </div>
+            </div>
+
+            <!-- Design Now -->
+            <div class="pod-item">
+              <div class="pod-content">
+                <h3 class="pod-title">Design Now</h3>
+                <p class="pod-source">Harvard Graduate School of Design</p>
+                <p class="pod-description">
+                  Faculty, researchers, alumni, and students illuminate the many
+                  ways in which design is engaged in questions of global
+                  politics, culture, and society.
+                </p>
+              </div>
+              <div class="pod-image">
+                <img src="assets/img19.jpeg" alt="Design Now" />
+              </div>
+            </div>
+
+            <!-- Harvard EdCast -->
+            <div class="pod-item">
+              <div class="pod-content">
+                <h3 class="pod-title">Harvard EdCast</h3>
+                <p class="pod-source">Harvard Graduate School of Education</p>
+                <p class="pod-description">
+                  Explore conversations about what makes a difference for
+                  learners, educators, parents, and communities.
+                </p>
+              </div>
+              <div class="pod-image">
+                <img src="assets/img20.png" alt="Harvard EdCast" />
+              </div>
+            </div>
+
+            <!-- PolicyCast -->
+            <div class="pod-item">
+              <div class="pod-content">
+                <h3 class="pod-title">PolicyCast</h3>
+                <p class="pod-source">Harvard Kennedy School</p>
+                <p class="pod-description">
+                  Leading scholars, researchers, and experts explain
+                  evidence-based policy solutions to the big problems we face in
+                  our society and our world.
+                </p>
+              </div>
+              <div class="pod-image">
+                <img src="assets/img21.jpg" alt="PolicyCast" />
+              </div>
+            </div>
+
+            <!-- Hope Podcast -->
+            <div class="pod-item">
+              <div class="pod-content">
+                <h3 class="pod-title">Hope Podcast</h3>
+                <p class="pod-source">Harvard Divinity School</p>
+                <p class="pod-description">
+                  Expand your understanding of the ways religion shapes the
+                  world with lectures, interviews, and reflections.
+                </p>
+              </div>
+              <div class="pod-image">
+                <img src="assets/img22.jpg" alt="Hope Podcast" />
+              </div>
+            </div>
+
+            <!-- Colloquy Podcast -->
+            <div class="pod-item">
+              <div class="pod-content">
+                <h3 class="pod-title">Colloquy Podcast</h3>
+                <p class="pod-source">
+                  The Harvard Kenneth C. Griffin Graduate School of Arts and
+                  Sciences
+                </p>
+                <p class="pod-description">
+                  Conversations with visionary scholars and thinkers from the
+                  Harvard PhD community.
+                </p>
+              </div>
+              <div class="pod-image">
+                <img src="assets/img23.jpg" alt="Colloquy Podcast" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--------------------------------------------------------       Related In Focus topics Section -------------------------------------------------------->
+
+      <section class="related-section">
+        <div class="related-container">
+          <!-- Left Side -->
+          <div class="related-main">
+            <span class="related-tag">YOU MAY ALSO LIKE</span>
+            <h2>Related In Focus topics</h2>
+          </div>
+
+          <!-- Right Side -->
+          <div class="related-topics">
+            <a href="#" class="topic-link">Healthy Living</a>
+            <a href="#" class="topic-link">Informed Aging</a>
+            <a href="#" class="topic-link">Happiness</a>
+          </div>
+        </div>
+      </section>
+
+      <!------------------------------------------  endd footer code below ------------------------------->
+    </main>
+  </body>
+  <footer class="footer" style="background-color: black; padding: 20px">
+    <div class="footer-container">
+      <!-- Links Section -->
+      <div class="footer-links">
+        <!-- Security & Brand -->
+        <div class="footer-column">
+          <h3>Security & Brand</h3>
+          <ul>
+            <li><a href="#">Report Copyright Infringement</a></li>
+            <li><a href="#">Report Security Issue</a></li>
+            <li><a href="#">Trademark Notice</a></li>
+          </ul>
+        </div>
+
+        <!-- Website -->
+        <div class="footer-column">
+          <h3>Website</h3>
+          <ul>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Digital Accessibility</a></li>
+            <li><a href="#">Privacy statement</a></li>
+          </ul>
+        </div>
+
+        <!-- Get In Touch -->
+        <div class="footer-column">
+          <h3>Get In Touch</h3>
+          <ul>
+            <li><a href="#">Contact Harvard</a></li>
+            <li><a href="#">Maps & Directions</a></li>
+            <li><a href="#">Jobs</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Logo and Copyright -->
+      <div class="footer-bottom">
+        <div class="footer-logo">
+          <p class="copyright">
+            Copyright © 2025 The President and Fellows of Harvard College
+          </p>
+
+          <img
+            src="assets/footer-logo.svg"
+            alt="Harvard Logo"
+            class="harvard-footer-logo"
+          />
+          <div class="social-links">
+            <a href="#" class="social-link"
+              ><img src="assets/socials/ins.png" alt="Instagram"
+            /></a>
+            <a href="#" class="social-link"
+              ><img src="assets/socials//tiktok-1.png" alt="TikTok"
+            /></a>
+            <a href="#" class="social-link"
+              ><img src="assets/socials/Linkd.png" alt="LinkedIn"
+            /></a>
+            <a href="#" class="social-link"
+              ><img src="assets/socials/fb.png" alt="Facebook"
+            /></a>
+            <a href="#" class="social-link"
+              ><img src="assets/socials/youtube-1.png" alt="YouTube"
+            /></a>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+      </div>
+    </div>
+  </footer>
+</html>

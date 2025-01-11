@@ -1,0 +1,1334 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  color: #1e1e1e;
+  background-color: #f3f4f4;
+}
+
+h1 {
+  font-family: Canela Deck Web;
+}
+p,
+a {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* Header styles */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0);
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo-placeholder {
+  width: 200px;
+  height: 80px;
+  background-image: url("assets/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Mobile Menu Styles */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.mobile-menu.active {
+  right: 0;
+  opacity: 1;
+  display: block;
+}
+
+.mobile-menu-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  padding: 2rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu.active .mobile-menu-content {
+  transform: translateX(0);
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+}
+
+.close-menu {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mobile-link {
+  color: #fffefe;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.mobile-link:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.search-btn,
+.menu-btn {
+  background: black;
+  color: white;
+  border: none;
+  align-content: center;
+  padding: 2rem 3.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.search-btn:hover,
+.menu-btn:hover {
+  background-color: rgba(0, 0, 0, 0.755);
+}
+
+/*************************************** Hero section ***************************************/
+.hero {
+  height: 100vh;
+  position: relative; /* Required for overlay positioning */
+  background-image: url("assets/img0.jpeg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(
+    235,
+    234,
+    234,
+    0.836
+  ); /* Black overlay with 50% opacity */
+  z-index: 1; /* Position below text */
+}
+
+.hero * {
+  position: relative; /* Ensure text and other elements appear above the overlay */
+  z-index: 2;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.841);
+}
+
+.hero-content h1 {
+  font-size: 7rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/******************************************* Resolution guide section *******************************************/
+.resolution-guide {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  min-height: 80vh;
+}
+
+.guide-image,
+.guide-content {
+  flex: 1;
+}
+
+.guide-content {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.guide-content h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.guide-content p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.arrow-link {
+  color: #1e1e1e;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.guide-image {
+  margin-top: 100px;
+  margin-left: 100px;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 500px;
+  background-image: url("assets/img1.jpeg");
+  background-size: cover;
+}
+
+/*************************************** Quote Section ***************************************/
+.quote-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 0px;
+  padding: 4rem 2rem;
+}
+
+.quote-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: table;
+  width: 100%;
+}
+
+.quote-content,
+.quote-image {
+  display: table-cell;
+  width: 50%;
+  vertical-align: middle;
+  padding: 2rem;
+}
+
+.quote-marks {
+  position: absolute;
+  top: 0;
+  left: -2rem;
+  font-size: 6rem;
+  color: #a51c30;
+  height: 40px;
+  width: 40px;
+  background-image: url("assets/quote.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.quote-content h1 {
+  font-family: "Canela Deck Web", serif;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.quote-author h3 {
+  font-family: "Lucida Sans", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.quote-author p {
+  font-size: 1rem;
+
+  color: #424141;
+  line-height: 1.4;
+  max-width: 90%;
+}
+
+.quote-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*************************************** free online course SECTION  ***************************************/
+/* Main section styles */
+.courses-section {
+  padding: 4rem 2rem;
+}
+
+.courses-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header styles */
+.courses-header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+}
+
+.courses-header h2 {
+  font-family: "Canela Deck Web", serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  flex: 0 0 40%;
+}
+
+.header-content {
+  flex: 0 0 50%;
+}
+
+.header-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.explore-link {
+  color: #1e1e1e;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  padding: 0.5rem;
+}
+
+.explore-link:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Course cards container */
+.course-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/* Individual card styles */
+.course-card {
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+  background-color: #dedddd;
+  transition: transform 0.3s ease;
+}
+
+.card-image-wrapper {
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Zoom effect on hover */
+.course-card:hover .card-image {
+  transform: scale(1.1);
+}
+
+/* Card content styles */
+.card-content {
+  padding: 2rem;
+}
+
+.course-tag {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.card-content h3 {
+  font-family: "Canela Deck Web", serif;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.course-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* Status indicator styles */
+.course-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #4caf50;
+  border-radius: 50%;
+}
+
+.status-text {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/*************************************** Concentrate on mental health SECTION ***************************************/
+
+.mental-health {
+  padding: 6rem 2rem;
+}
+
+.mental-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  gap: 4rem;
+}
+
+/* Left Column Styles */
+.mental-intro {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.intro-content {
+  padding-right: 2rem;
+}
+
+.mental-intro h2 {
+  font-family: "Canela Deck Web", serif;
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.mental-intro p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.underline-link {
+  color: #1e1e1e;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.learn-more {
+  color: #1e1e1e;
+  text-decoration: underline;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+
+  transition: background-color 0.3s;
+}
+
+.mental-image {
+  width: 100%;
+}
+
+.mental-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Right Column Styles */
+.mindfulness-steps {
+  flex: 1;
+  padding-left: 2rem;
+}
+
+.mindfulness-steps h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.step {
+  margin-bottom: 2rem;
+}
+
+.step h4 {
+  font-family: "Canela Deck Web", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  color: #a51c30;
+  gap: 0.5rem;
+}
+
+.step-number {
+  color: #a51c30;
+}
+
+.step p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+/*************************************** Read an engaging book SECTION ***************************************/
+/* Books Section Styles */
+.book-rec-section {
+  padding: 6rem 2rem;
+}
+
+.book-rec-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.book-rec-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.book-rec-header h2 {
+  font-family: "Canela Deck Web", serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+}
+
+/* Top Arrow Button Style */
+.book-rec-explore-all {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #1e1e1e;
+  text-decoration: none;
+}
+
+.book-rec-arrow-icon {
+  padding: 7px;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+  width: 40px;
+  height: 40px;
+  opacity: 0.6;
+  background-color: #807f7f;
+}
+
+.book-rec-arrow-icon:hover {
+  background-color: #2b2b2b;
+}
+
+/* Cards Container */
+.book-rec-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Individual Card Styles */
+.book-rec-card {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  max-width: 350px;
+  text-decoration: none;
+  color: white;
+}
+
+.book-rec-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s, filter 0.5s;
+}
+
+.book-rec-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  transition: opacity 0.3s;
+}
+
+.book-rec-content {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+}
+
+.book-rec-title {
+  font-family: "Canela Deck Web", serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  position: relative;
+  display: inline-block;
+  color: white;
+}
+
+/* Underline effect */
+.book-rec-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.book-rec-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.book-rec-link span {
+  color: white;
+  opacity: 0.8;
+}
+
+/* Hover Effects */
+.book-rec-card:hover .book-rec-image {
+  transform: scale(1.05);
+  filter: brightness(0.7);
+}
+
+.book-rec-card:hover .book-rec-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.book-rec-card:hover .book-rec-title::after {
+  width: 100%;
+}
+
+/*************************************** Subscribe to an informative podcast SECTION  ***************************************/
+
+.pod-section {
+  padding: 6rem 2rem;
+}
+
+.pod-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pod-header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 4rem;
+}
+
+.pod-header h2 {
+  font-family: "Canela Deck Web", serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.pod-subtitle {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.pod-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.pod-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgb(164, 161, 161);
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.pod-item:hover {
+  transform: translateY(-4px);
+}
+
+.pod-content {
+  flex: 1;
+  padding-right: 3rem;
+}
+
+.pod-title {
+  font-family: "Canela Deck Web", serif;
+
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.pod-source {
+  color: #a51c30;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.pod-description {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.pod-image {
+  flex: 0 0 200px;
+}
+
+.pod-image img {
+  width: 80%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/*************************************** Related In Focus topics Section ***************************************/
+
+.related-section {
+  height: 60vh;
+  position: relative;
+  background-image: url("assets/img24.jpeg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.related-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(235, 234, 234, 0.836);
+  z-index: 1;
+}
+
+.related-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.related-main {
+  flex: 0 0 50%;
+}
+
+.related-tag {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1e1e1e;
+}
+
+.related-main h2 {
+  font-family: "Canela Deck Web", serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #1e1e1e;
+  line-height: 1.2;
+}
+
+.related-topics {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.topic-link {
+  font-size: 1.5rem;
+  color: #1e1e1e;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: background-color 0.3s;
+  font-weight: bold;
+  border-bottom: 1px solid gray;
+}
+
+/*************************************** Footer ***************************************/
+.footer {
+  background-color: #000000;
+  color: white;
+  padding: 6rem 2rem;
+  margin-top: 4rem;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Links Section */
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 6rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-column h3 {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 1.5rem;
+}
+
+.footer-column ul li a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.footer-column ul li a:hover {
+  color: white;
+}
+
+/* Bottom Section */
+.footer-bottom {
+  display: flex;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.harvard-footer-logo {
+  height: 140px;
+  width: auto;
+}
+
+.copyright {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  font-family: "Lucida Sans", sans-serif;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.social-link img {
+  width: 50px;
+  height: 50px;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.social-link:hover img {
+  opacity: 1;
+}
+
+/*************************************** Media Queries ***************************************/
+@media (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 4rem;
+  }
+
+  .guide-content {
+    padding: 2rem;
+  }
+
+  .guide-content h2 {
+    font-size: 2.5rem;
+  }
+  .quote-content blockquote {
+    font-size: 2rem;
+  }
+
+  .courses-header {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .courses-header h2,
+  .header-content {
+    flex: 0 0 100%;
+  }
+
+  .course-card {
+    flex: 0 0 calc(50% - 1rem);
+  }
+
+  .mental-container {
+    gap: 2rem;
+  }
+
+  .mental-intro h2 {
+    font-size: 3rem;
+  }
+  .books-header h2 {
+    font-size: 3rem;
+  }
+
+  .book-rec-header h2 {
+    font-size: 3rem;
+  }
+
+  .book-rec-title {
+    font-size: 1.8rem;
+  }
+
+  .card-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .pod-header h2 {
+    font-size: 3rem;
+  }
+
+  .pod-item {
+    padding: 1.5rem;
+  }
+
+  .pod-content {
+    padding-right: 2rem;
+  }
+
+  .related-main h2 {
+    font-size: 3rem;
+  }
+
+  .topic-link {
+    font-size: 1.25rem;
+  }
+  .footer {
+    padding: 6rem 2.5rem;
+  }
+  .footer-links {
+    gap: 4rem;
+  }
+
+  .footer-logo {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+  .search-btn {
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content p {
+    font-size: 1.25rem;
+  }
+
+  .resolution-guide {
+    flex-direction: column;
+  }
+
+  .guide-image {
+    min-height: 50vh;
+  }
+
+  .quote-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .quote-content,
+  .quote-image {
+    width: 100%;
+    display: block;
+    padding: 1rem;
+  }
+
+  .quote-content {
+    order: 1;
+  }
+
+  .quote-image {
+    order: 2;
+  }
+
+  .quote-content blockquote {
+    font-size: 1.8rem;
+  }
+
+  .courses-section {
+    padding: 2rem 1rem;
+  }
+
+  .courses-header h2 {
+    font-size: 2.5rem;
+  }
+
+  .course-card {
+    flex: 0 0 100%;
+  }
+  .mental-health {
+    padding: 4rem 1.5rem;
+  }
+
+  .mental-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .mental-intro h2 {
+    font-size: 2.5rem;
+  }
+
+  .book-rec-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .book-rec-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .book-rec-header h2 {
+    font-size: 2.5rem;
+  }
+
+  .book-rec-grid {
+    flex-direction: column;
+  }
+
+  .book-rec-card {
+    aspect-ratio: 16/9;
+  }
+
+  .book-rec-title {
+    font-size: 1.5rem;
+  }
+
+  .intro-content {
+    padding-right: 0;
+  }
+
+  .mindfulness-steps {
+    padding-left: 0;
+  }
+
+  .step h4 {
+    font-size: 1.8rem;
+  }
+
+  .books-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .books-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .books-header h2 {
+    font-size: 2.5rem;
+  }
+
+  .book-cards {
+    flex-direction: column;
+  }
+
+  .book-card {
+    aspect-ratio: 16/9;
+  }
+
+  .book-rec-header h2 {
+    font-size: 2rem;
+  }
+
+  .book-rec-content {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1.5rem;
+  }
+
+  .card-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .pod-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .pod-header h2 {
+    font-size: 2.5rem;
+  }
+
+  .pod-item {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+  }
+
+  .pod-content {
+    padding-right: 0;
+  }
+
+  .pod-image {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .pod-title {
+    font-size: 1.5rem;
+  }
+
+  .related-section {
+    height: auto;
+    padding: 4rem 2rem;
+  }
+
+  .related-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .related-main {
+    flex: 0 0 100%;
+  }
+
+  .related-main h2 {
+    font-size: 2.5rem;
+  }
+
+  .related-topics {
+    flex: 0 0 100%;
+  }
+
+  .footer {
+    padding: 4rem 1.5rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .footer-logo {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .guide-content {
+    padding: 1.5rem;
+  }
+
+  .guide-content h2 {
+    font-size: 2rem;
+  }
+
+  .courses-header h2 {
+    font-size: 2rem;
+  }
+
+  .header-content p {
+    font-size: 1rem;
+  }
+
+  .card-content {
+    padding: 1.5rem;
+  }
+
+  .mental-health {
+    padding: 3rem 1rem;
+  }
+
+  .mental-intro h2 {
+    font-size: 2rem;
+  }
+
+  .mental-intro p {
+    font-size: 1rem;
+  }
+
+  .step h4 {
+    font-size: 1.5rem;
+  }
+
+  .books-header h2 {
+    font-size: 2rem;
+  }
+
+  .card-content {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1.5rem;
+  }
+
+  .pod-header h2 {
+    font-size: 2rem;
+  }
+
+  .pod-subtitle {
+    font-size: 1rem;
+  }
+
+  .pod-item {
+    padding: 1rem;
+  }
+
+  .related-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .related-main h2 {
+    font-size: 2rem;
+  }
+
+  .topic-link {
+    font-size: 1.1rem;
+  }
+}
